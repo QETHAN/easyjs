@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>event-currentTarget</title>
+    <meta name="description" content="" />
+    <meta name="author" content="木小乐" />
+    <script type="text/javascript" src="../build/easy-0.9.2.js"></script>
+  </head>
+  <body>
+    <div id="box1">
+      <ul>
+        <li action-type="test"><a href="javascript:;">1</a></li>
+        <li action-type="test"><a href="javascript:;">2</a></li>
+        <li action-type="test"><a href="javascript:;">3</a></li>
+        <li action-type="test"><a href="javascript:;">4</a></li>
+      </ul>
+    </div>
+    <script>
+      E.config({
+          baseUrl : 'module/'
+      });
+      E( '#box1' ).on( 'click', 'li', function(evt){
+        console.log(evt);
+      });
+    </script>
+  </body>
+</html>
